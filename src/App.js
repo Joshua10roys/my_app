@@ -31,7 +31,8 @@ const DownloadPdf = () => {
             let percentage = Math.round((progressEvent.loaded * 100) / progressEvent.total)
             setProgress(percentage)
           }
-        })
+        }
+      )
       .then((response) => {
         const url = window.URL.createObjectURL(response.data);
         setFile(url)
